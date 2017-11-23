@@ -77,7 +77,7 @@ define(Gxn,calc(1.0/Gxp)) dnl>
 define(Gyn,calc(1.0/Gyp)) dnl>
 dnl>
 
-convertToMeters 1;
+convertToMeters 1e-1;
 
 vertices
 (
