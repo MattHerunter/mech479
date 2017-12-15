@@ -1,0 +1,12 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Clear timesteps (directories with decimal numbers for names, excluding 0)
+ls | grep -P "^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$" | xargs -d"\n" rm -rf
+
+# Clear processor directories
+rm -rf processor*
+
+# Clear logs and paraView files
+rm -rf log.* *.OpenFOAM *.blockMesh
+#------------------------------------------------------------------------------

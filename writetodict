@@ -1,0 +1,13 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+mkdir $1
+
+# Clear timesteps (directories with decimal numbers for names, excluding 0)
+ls | grep -P  "^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$" | xargs -I {} cp -r {} $1
+cp -r 0 $1
+
+cp -r system $1
+cp -r constant $1
+cp -r postProcessing $1
+#------------------------------------------------------------------------------

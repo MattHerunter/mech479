@@ -1,0 +1,3 @@
+foamMonitor postProcessing/forceCoeffs/0/forceCoeffs.dat &
+gnuplot plotter - &
+
